@@ -3,3 +3,4 @@ const myName = 'Aydin';
 const mySurname = 'Kuru';
 console.log("test");
 console.log(myName);
+console.log(mySurname);
