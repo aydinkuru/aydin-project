@@ -1,2 +1,3 @@
-console.log("Hello World")
-const myName = 'Aydin'
+console.log("Hello World");
+const myName = 'Aydin';
+const mySurname = 'Kuru';
