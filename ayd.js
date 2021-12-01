@@ -4,3 +4,7 @@ const mySurname = 'Kuru';
 console.log("test");
 console.log(myName);
 console.log(mySurname);
+console.log("bunedir");
+console.log("bunedir2");
+
+
