@@ -1,0 +1,51 @@
+{
+  "name": "aydinkuru",
+  "version": "1.0.0",
+  "description": "Project description",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "lint-staged",
+    "start": "node src/index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "pretty-quick --staged",
+      "eslint --fix"
+    ],
+    "*.+(json|css|md)": [
+      "pretty-quick --staged"
+    ]
+  },
+  "keywords": [],
+  "author": "Aydin Kuru <aydinkuru81@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aydinkuru/aydin-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aydinkuru/aydin-project/issues"
+  },
+  "homepage": "https://github.com/aydinkuru/aydin-project#readme",
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.2",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
