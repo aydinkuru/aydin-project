@@ -1,0 +1,14 @@
+FROM node:17.3.0-alpine2.22
+
+ENV NODE_ENV=production
+
+WORKDIR /app
+
+ADD package.json package-lock.json ./
+
+RUN npm install --production
+
+ADD bin ./bin
+ADD src ./src
+
+CMD [ "npm", "start" ]
