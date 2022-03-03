@@ -1,1 +1,0 @@
-# aydin_project
