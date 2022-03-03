@@ -49,4 +49,6 @@ app.use((err, req, res) => {
   res.render('error')
 })
 
+console.log(`i'm alive or maybe dead`)
+
 module.exports = app
