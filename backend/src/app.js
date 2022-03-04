@@ -8,6 +8,7 @@ require('./database-connection')
 
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
+const photosRouter = require('./routes/photos')
 
 const app = express()
 
@@ -30,8 +31,9 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/', indexRouter)
-app.use('/users', usersRouter)
+app.use('/api/', indexRouter)
+app.use('/api/users', usersRouter)
+app.use('/api/photos', photosRouter)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
