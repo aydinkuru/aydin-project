@@ -8,6 +8,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import axios from "axios"
 
 export default {
   name: "HomeView",
@@ -16,6 +17,13 @@ export default {
   },
   data() {
   return {
-  user
+  users: []
+  }
+  }
+  async created() {
+  const usersRequest = await axios.get('/api/users');
+
+  this.users = usersRequest.data
+  }
 };
 </script>
