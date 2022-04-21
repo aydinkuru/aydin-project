@@ -14,5 +14,8 @@ export default {
   components: {
     HelloWorld,
   },
+  data() {
+  return {
+  user
 };
 </script>
