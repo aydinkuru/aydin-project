@@ -7,7 +7,7 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import HelloWorld from "@/components/HelloWorld.vue"
 import axios from "axios"
 
 export default {
@@ -16,14 +16,14 @@ export default {
     HelloWorld,
   },
   data() {
-  return {
-  users: []
-  }
-  }
+    return {
+      users: [],
+    }
+  },
   async created() {
-  const usersRequest = await axios.get('/api/users');
+    const usersRequest = await axios.get('/api/users')
 
-  this.users = usersRequest.data
-  }
-};
+    this.users = usersRequest.data
+  },
+}
 </script>
