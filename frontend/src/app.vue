@@ -1,11 +1,9 @@
-<template>
-  <div id="app">
-    <nav>
-      <router-link to="/">home</router-link> |
-      <router-link to="/about">about</router-link>
-    </nav>
-    <router-view />
-  </div>
+<template lang="pug">
+  #app
+    #nav
+      router-link(to="/") Home |&nbsp;
+      router-link(to="/about") About
+    router-view
 </template>
 
 <style lang="scss">
@@ -13,11 +11,10 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
-nav {
+#nav {
   padding: 30px;
 
   a {
