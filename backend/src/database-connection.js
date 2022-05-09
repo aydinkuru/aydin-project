@@ -5,11 +5,11 @@ const password = process.env.MONGODB_PASSWORD
 const dbName = process.env.MONGODB_DATABASE
 let connectionString = process.env.MONGODB_CONNECTION_STRING
 
-if (!connectionString) {
-  connectionString = `mongodb+srv://${username}:${password}@cluster0.ynved.mongodb.net/${dbName}?retryWrites=true&w=majority`
-}
-
 mongoose.set('debug', true)
+
+if (!connectionString) {
+  connectionString = `mongodb+srv://${username}:${password}@bunchart.w9ksy.mongodb.net/${dbName}?retryWrites=true&w=majority`
+}
 
 mongoose
   .connect(connectionString, {
@@ -18,4 +18,5 @@ mongoose
   })
   .then(() => console.log('connection established'))
   .catch(console.log)
+
 module.exports = mongoose.connection
