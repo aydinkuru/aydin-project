@@ -8,7 +8,7 @@ let connectionString = process.env.MONGODB_CONNECTION_STRING
 mongoose.set('debug', true)
 
 if (!connectionString) {
-  connectionString = `mongodb+srv://${username}:${password}@bunchart.w9ksy.mongodb.net/${dbName}?retryWrites=true&w=majority`
+  connectionString = `mongodb+srv://${username}:${password}@cluster0.ynved.mongodb.net/${dbName}?retryWrites=true&w=majority`
 }
 
 mongoose
