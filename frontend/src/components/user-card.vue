@@ -17,7 +17,7 @@ export default {
   h2 Photos ({{ user.photos.length }})
 
   .photo(v-for="photo in user.photos")
-    img(:src="`https://picsum.photos${photo.filename}`" :alt="photo.description" :title="photo.description")
+    img(:src="`https://picsum.photos/seed/${photo._id}/320/320`" :alt="photo.description" :title="photo.description")
     p(v-if="!photo.likedBy.length")
       | no likes yet!
     p(v-else)
